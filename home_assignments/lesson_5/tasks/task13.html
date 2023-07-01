@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script async src="script.js"></script>
+   <title>Document</title>
+</head>
+<body>
+   <h1>Задача 13</h1>
+   <p>
+      Поступово генерувати 100 випадкових чисел від 1 до 1000. <br>
+      Підрахувати яких чисел більше: парних чи непарних.
+   </p>  
+
+   <script>
+      // Введення
+      let evenCount = 0
+      let oddCount = 0
+      for (let i = 1; i <= 100; i++) {
+         let randomNumber = 1 + Math.floor(Math.random()*(1000 - 1 + 1))
+         if (randomNumber % 2 === 0) {
+            evenCount++
+         } else { 
+            oddCount++ 
+         }    
+      }
+      document.write(`Кількість парних чисел: ${evenCount} `)
+      document.write(`Кількість непарних чисел: ${oddCount} `)
+
+      if (evenCount>oddCount) {
+         document.write("Парних чисел більше")
+      } else if (evenCount<oddCount) {
+         document.write("Непарних чисел більше")
+      } else {
+         document.write("Парних та непарних чисел однакова кількість")
+      }
+   </script>
+</body>
+</html>
+
+
+

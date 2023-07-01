@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script async src="script.js"></script>
+   <title>Document</title>
+</head>
+<body>
+   <h1>Задача 4</h1>
+
+   <p>
+      З клавіатури вводиться вік людини. Вивести на екран ким він є 
+      (дитиною у садочку, школярем, студентом, працівником, пенсіонером).
+   </p>
+
+   <script>
+      // Введення
+      let personAge = parseInt(prompt('Вік людини'))
+      let result
+     
+      // const childMin = 2
+      // const childMax = 5
+      // const pupilMin = 6
+      // const pupilMax = 16
+      // const studentMin = 17
+      // const studentMax = 22
+      // const workerMin = 23
+      // const workerMax = 55
+      // const pensionerMin = 56
+      // const pensionerMax = 120
+
+      // Обчислення
+      if (personAge < 1 || personAge > 120) result = 'Некоректний вік'
+      else if (personAge <= 6) result = "Дитина у садочку"
+      else if (personAge <= 16) result = "Школяр"
+      else if (personAge <= 22) result = "Студент"
+      else if (personAge <= 55) result = "Працівник"
+      else result = "Пенсіонер"
+      alert(result)
+
+      // if (childMin <= personAge && personAge <= childMax)
+      //  alert('Дитина у садочку')
+      // else {
+      //    if (pupilMin <= personAge && personAge <= pupilMax)
+      //       alert('Школяр')
+      //    if (studentMin <= personAge && personAge <= studentMax)
+      //       alert('Студент')  
+      //    if (workerMin <= personAge && personAge <= workerMax)
+      //       alert('Працівник')     
+      //    if (pensionerMin <= personAge && personAge <= pensionerMax)
+      //       alert('Пенсіонер')     
+      // } 
+   </script>
+</body>
+</html>

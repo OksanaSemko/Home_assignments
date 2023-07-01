@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script async src="script.js"></script>
+   <title>Document</title>
+</head>
+<body>
+   <h1>Задача 4</h1>
+
+   <p>
+      Дано довжину у сантиметрах. 
+      Визначати скільки це метрів і кілометрів.
+   </p>
+
+   <script>
+      // Введення
+      let lengthCentimeter = parseFloat(prompt("довжину у сантиметрах", "0"))
+      const oneCentimeterPerMeter  = 0.01
+      const oneMeterPerKilometer  = 0.001
+
+      // Обчислення
+      let lengthMeters = lengthCentimeter*oneCentimeterPerMeter
+      let lengthKilometers = lengthMeters*oneMeterPerKilometer
+
+      // Виведення
+      document.write (`Довжина у метрах  = ${lengthMeters} <br>`)
+      document.write (`Довжина у кілометрах = ${lengthKilometers} <br>`)
+
+   </script>
+</body>
+</html>

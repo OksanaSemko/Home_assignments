@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script async src="script.js"></script>
+   <title>Document</title>
+</head>
+<body>
+   <h1>Задача 15</h1>
+
+   <p>
+      Ігровий автомат. Випадково вибираємо зображення у 3 позиціях.<br>
+      Вибір у кожній позиції вибирається як одне з чотирьох зображень.<br>
+      Вивести ці зображення і повідомити виграш користувача<br>
+      (три перших зображення 100 грн, три других – 200, три третіх – 500,<br>
+      три четвертих зображення – 1000грн). Використати цикли і switch<br>
+      (для вибору зображення за номером).
+   </p>
+
+   <script>
+
+      //  1 - 10      10^1        30
+      //  2 - 100     10^2        300
+      //  3 - 1000    10^3        3000
+      //  4 - 10000   10^4        30000
+
+      const rangeStart = 1,
+        rangeEnd = 4
+
+      let sum = 0
+      for (let i = 0; i < 3; i++) {
+        let imgNum =
+          rangeStart + Math.floor(Math.random() * (rangeEnd - rangeStart + 1))
+        document.write(`<img src="./img/img${imgNum}.jpg" style="width:50px"/>`)
+        sum += Math.pow(10, imgNum - 1) //sum +=  10 ^ imgNum-1
+      }
+      let money = 0
+      switch (sum) {
+        case 30:
+          money = 100
+          break
+        case 300:
+          money = 200
+          break
+        case 3000:
+          money = 500
+          break
+        case 30000:
+          money = 1000
+          break
+      }
+      document.write(`Виграш = ${money}`)
+   </script>
+</body>
+</html>

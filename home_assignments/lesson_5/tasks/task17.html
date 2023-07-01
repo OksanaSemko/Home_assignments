@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script async src="script.js"></script>
+   <title>Document</title>
+</head>
+<body>
+   <h1>Задача 17</h1>
+
+   <p>
+      Каса. Користувачу повідомляють суму, яку йому треба сплатити.<br>
+      Користувач поступово вводить суму грошей до тих пір,<br>
+      поки суми не буде достатньо для оплати товарів<br>
+      (кожного разу користувачу повідомляють, яку ще суму потрібно ввести). 
+   </p>
+
+   <script>
+
+      const totalPrice = parseFloat(prompt("Введіть загальну суму, яку треба сплатити: "))
+      let userPayment = 0
+      while (userPayment < totalPrice) {
+         let remainingPayment = totalPrice - userPayment
+         let addPayment = parseFloat(prompt(`Внесіть оплату (ще потрібно: ${remainingPayment}): `)) 
+         userPayment += addPayment  
+      }
+      alert(`Сума була достатньою для оплати товарів. Загальна сума: ${totalPrice}. Сплачено: ${userPayment}.`)
+    
+   </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script async src="script.js"></script>
+   <title>Document</title>
+</head>
+<body>
+   <h1>Задача 6</h1>
+
+   <p>
+      З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. 
+      Обчислити вартість кожного товару окремо та загальну вартість. 
+      Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+   </p>
+
+   <script>
+      // Введення
+      let quantityProductOne = parseFloat(prompt("Кількість першого товару", "0"))
+      let costProductOne = parseFloat(prompt("вартість першого товару", "0"))
+      let quantityProductTwo = parseFloat(prompt("Кількість другого товару", "0"))
+      let costProductTwo = parseFloat(prompt("вартість другого товару", "0"))
+      let quantityProductThree = parseFloat(prompt("Кількість третього товару", "0"))
+      let costProductThree = parseFloat(prompt("вартість третього товару", "0"))
+      
+      // Обчислення
+      let totalCostProductOne = costProductOne*quantityProductOne;
+      let totalCostProductTwo = costProductTwo*quantityProductTwo
+      let totalCostProductThree = costProductThree*quantityProductThree
+      let totalPrice = totalCostProductOne+totalCostProductTwo+totalCostProductThree
+
+      // Виведення
+      document.write (`
+         <table>
+            <tr>
+               <th>Найменування</th>
+               <th>Кількість</th>
+               <th>Ціна</th>
+               <th>Сума</th>
+            </tr>
+            <tr>
+               <td>Перший товар</td>
+               <td>${quantityProductOne}</td>
+               <td>${costProductOne}</td>
+               <td>${totalCostProductOne}</td>
+            </tr>
+            <tr>
+               <td>Другий товар</td>
+               <td>${quantityProductTwo}</td>
+               <td>${costProductTwo}</td>
+               <td>${totalCostProductTwo}</td>
+            </tr>
+            <tr>
+               <td>Третій товар</td>
+               <td>${quantityProductThree}</td>
+               <td>${costProductThree}</td>
+               <td>${totalCostProductThree}</td>
+            </tr>
+            <tr>
+               <th>Всьго</th>
+               <th></th>
+               <th></th>
+               <th>${totalPrice}<th>
+            </tr>
+         </table>
+      `)
+   </script>
+</body>
+</html>
